@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body type="body" id="body">
+<form action="#">
+    <label>
+        Текст
+        <input type="text" id="text" placeholder="Введите текст">
+    </label>
+    <button type="submit" id="submit">Нажми меня</button>
+</form>
+<div id="rectangle"></div>
+
+    
+    <script>
+    body.onclick = function(event) {
+    //document.querySelector('#body').addEventListener('click'), (event) => {
+        alert('Здесь ничего нет, нажмите, пожалуйста, на кнопку или заполните поле ввода.')
+    };
+    //    documet.body.addEventListener('click', (event) => {
+    //        event.target()
+    //        alert('Здесь ничего нет, нажмите, пожалуйста, на кнопку или заполните поле ввода.')(event.target)
+    //    });  
+        document.querySelector('#text').addEventListener('click', (event) => {
+            event.stopPropagation()
+        });    
+        document.querySelector('#submit').addEventListener('click', (event) => {
+            event.stopPropagation()
+        }); 
+
+        
+    </script>
+
+</body>
+</html>
